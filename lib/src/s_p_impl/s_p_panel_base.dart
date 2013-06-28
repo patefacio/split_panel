@@ -372,7 +372,7 @@ abstract class SPPanelBase extends WebComponent {
   }
 
   /// As mouse moves the ghost splitter must track it during a splitter move
-  void moveGhostSplitter(e) {
+  void _moveGhostSplitter(e) {
     num delta = distance(_splitterMoveStart, e.client);
     var firstLength = _firstSplitElement.length;
     var secondLength = _secondSplitElement.length;
@@ -390,7 +390,7 @@ abstract class SPPanelBase extends WebComponent {
 
     // Create the subscription for mouse move events, but only track them when
     // handling splitter move events
-    _moveSubscription = document.onMouseMove.listen((e) => moveGhostSplitter(e));
+    _moveSubscription = document.onMouseMove.listen((e) => _moveGhostSplitter(e));
     _moveSubscription.pause();
     document.onMouseUp.listen((e) => _endSplitterMove(e));
 
