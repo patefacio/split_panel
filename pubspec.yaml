@@ -1,0 +1,11 @@
+name: split_panel
+version: 0.0.1
+dependencies:
+  browser:
+  pathos:
+  web_ui:
+  logging:
+  logging_handlers:
+# custom <split_panel dependencies>
+# end <split_panel dependencies>
+

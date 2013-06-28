@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="import" href="package:split_panel/components/s_p_v_panel.html">
+  <link rel="import" href="package:split_panel/components/s_p_h_panel.html">
+  <link rel="stylesheet" href="packages/split_panel/components/split_panel.css">  
+  <!-- custom <head verticalInHorizontal> -->
+  <!-- end <head verticalInHorizontal> -->
+  
+  </head>
+  <body>
+  <!-- custom <body verticalInHorizontal> -->
+
+  <x-s-p-h-panel data-s-p-fit-to-method='window' style="background: CornSilk">
+    <x-s-p-v-panel data-s-p-fit-to-method='parent' style="background: CornSilk">
+      <p>H1 Vertical (First) Panel Nested in Horizontal Panel</p>
+      <p>H1 Vertical (Second) Panel Nested in Horizontal Panel</p>
+      <p>H1 Vertical (Third) Panel Nested in Horizontal Panel</p>
+    </x-s-p-v-panel>
+    <x-s-p-v-panel data-s-p-fit-to-method='parent' style="background: CornSilk">
+      <p>H2 Vertical (First) Panel Nested in Horizontal Panel</p>
+      <p>H2 Vertical (Second) Panel Nested in Horizontal Panel</p>
+      <p>H2 Vertical (Third) Panel Nested in Horizontal Panel</p>
+    </x-s-p-v-panel>
+  </x-s-p-h-panel>
+    
+  <!-- end <body verticalInHorizontal> -->
+  
+  </body>
+</html>

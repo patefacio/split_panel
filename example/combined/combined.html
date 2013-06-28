@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <link rel="import" href="package:split_panel/components/s_p_v_panel.html">
+  <link rel="import" href="package:split_panel/components/s_p_h_panel.html">
+  <link rel="stylesheet" href="packages/split_panel/components/split_panel.css">  
+  <!-- custom <head combined> -->
+  <!-- end <head combined> -->
+  
+  </head>
+  <body>
+  <!-- custom <body combined> -->
+
+  <x-s-p-h-panel id="hpanel" data-s-p-fit-to-method="window" style="margin: 0px;">
+    <div id="h1" style="padding: 10px; background-color: Bisque; border: solid 2px BurlyWood; margin: 0px;">
+      <p>This is the first of three horizontal split elements within the horizontal split panel</p>
+
+      Lorem ipsum dolor sit amet,
+      consectetur adipiscing elit. Donec lobortis est rutrum ipsum
+      viverra, eget scelerisque ligula laoreet. Ut aliquet pulvinar
+      cursus. Donec turpis arcu, ultrices vitae consequat sit amet,
+      varius vitae lacus. Nunc in pretium turpis. Proin ultricies
+      neque in arcu vulputate, at egestas nulla lobortis. Etiam vitae
+      neque ut neque vehicula molestie. Sed in risus vel massa
+      ultricies egestas interdum ut augue. Nunc a sapien ut mi rhoncus
+      commodo.
+
+      Aenean porta porttitor risus eu blandit. Duis mi dolor, sagittis
+      ac dictum vel, pellentesque non lacus. Curabitur varius massa
+      sed nisl mattis, nec ullamcorper erat bibendum. Maecenas eros
+      arcu, cursus at sapien eu, rutrum volutpat massa. Morbi et odio
+      vitae diam commodo commodo. Donec gravida lacus tortor, quis
+      aliquet magna ullamcorper quis. Nullam augue turpis, consectetur
+      in tortor posuere, aliquam laoreet lacus. Vivamus molestie, leo
+      vitae congue convallis, felis massa ultricies tellus, sit amet
+      placerat quam nunc vitae velit. Ut mollis consequat tellus quis
+      vestibulum.
+
+      Aliquam tempus turpis vitae arcu suscipit, tincidunt
+      sollicitudin nibh faucibus. Nullam sit amet sapien mattis,
+      ultrices lacus vitae, venenatis dolor. Maecenas venenatis
+      sollicitudin nisl non ornare. Nullam ultricies orci ante, ut
+      ultrices odio lacinia vitae. Integer molestie libero sed velit
+      semper euismod. Donec egestas et arcu ac consequat. Praesent
+      laoreet orci ut felis accumsan placerat. Aliquam ornare
+      hendrerit mauris, vitae aliquam lorem mollis
+      facilisis. Phasellus eu erat felis. Phasellus eros augue,
+      malesuada non ultricies id, facilisis id quam. Duis a suscipit
+      metus, eu vehicula neque. Integer augue dolor, molestie sit amet
+      felis a, egestas tempus magna. Proin semper faucibus
+      commodo. Fusce mollis libero ut sapien ultricies rhoncus. Proin
+      placerat risus diam, sed tempus ante dictum vel. Aenean tempus
+      purus sit amet venenatis sagittis.
+
+      Ut sollicitudin facilisis nibh. Aenean vulputate turpis a mi
+      imperdiet consequat. Aliquam eu mi nulla. Curabitur non
+      sollicitudin tellus. Proin euismod odio sit amet vehicula
+      euismod. Donec bibendum blandit purus non scelerisque. Maecenas
+      eget accumsan nibh, sit amet posuere tellus.
+
+      Praesent condimentum eros eget massa pellentesque feugiat. Etiam
+      massa leo, laoreet at imperdiet ut, aliquam quis turpis. Mauris
+      quam velit, dictum sit amet suscipit in, porta at enim. Nunc non
+      elit leo. Aliquam nec est mollis, pretium lectus ut, bibendum
+      nulla. Curabitur nec facilisis nisi. Phasellus lorem neque,
+      tempor quis ligula quis, dapibus imperdiet felis. Phasellus
+      sodales, metus vulputate dignissim lacinia, tortor elit
+      dignissim lectus, id ornare lectus erat nec libero.
+    </div>
+    <div id="h2" data-s-p-static="true" style="margin: 0px;">
+      <p>This is the second horizontal split elements within the horizontal split panel.</p>
+      <p>This is a <em>static</em> window within a horizontal panel</p>
+      <hr>
+      <p>On resizes, this panel should keep the same height...</p>
+    </div>
+    <x-s-p-v-panel id="vpanel" data-s-p-fit-to-method="parent" data-s-p-proportion="0.55" style="background-color: Bisque; margin: 0px; border: solid 0px BurlyWood;">
+      <x-s-p-h-panel id="inner-hpanel" data-s-p-fit-to-method="parent" data-s-p-proportion="0.65" style="margin: 0px; border: solid 3px BurlyWood;">
+        <div id="a-list" style="margin: 0px; border: solid 5px BurlyWood;">
+          <ul>
+            <li>As I was going to St Ives</li>
+            <li>I met a man with seven wives</li>
+            <li>The seven wives had seven sacks</li>
+            <li>The seven sacks had seven cats</li>
+            <li>The seven cats had seven kits</li>
+            <li>Kits, cats, sacks and wives</li>
+            <li>How many were going to St Ives?</li>
+          </ul>
+        </div>
+        <x-s-p-v-panel id="v-quote-panel" data-s-p-fit-to-method="parent" style="border: solid 5px BurlyWood;">
+          <div id="goo" style="margin: 0px; border: solid 3px BurlyWood;">
+            Computer Science is no more about computers than astronomy is about telescopes.  -- Edsgar W. Dijkstra
+          </div>
+          <div id="foo" style="margin: 0px; border: solid 3px BurlyWood;">
+            Computers in the future may weigh no more than 1.5 tons. -- Popular Mechanics, 1949
+          </div>
+        </x-s-p-v-panel>
+      </x-s-p-h-panel>
+      <div id="v2" data-s-p-static="true" style="width: 100px">
+        <p>This is the second of three split elements in a vertical panel. It is static, so it should not be changing width on resize.</p>
+      </div>
+      <div id="v3" data-s-p-proportion="0.35">
+        <p>This is the last of three split elements in a vertical panel. It should be initialized 35% of panel width excluding any static elements (i.e. the middle panel)</p>
+      </div>
+    </x-s-p-v-panel>
+  </x-s-p-h-panel>
+
+  <!-- end <body combined> -->
+  
+  </body>
+</html>

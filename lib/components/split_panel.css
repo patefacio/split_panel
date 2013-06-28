@@ -1,0 +1,60 @@
+/* custom <splitPanel top> */
+/* end <splitPanel top> */
+
+
+[is=x-s-p-v-panel] {
+  /* custom <s-p-v-panel> */
+    position: absolute;
+  /* end <s-p-v-panel> */
+  
+}
+
+
+[is=x-s-p-h-panel] {
+  /* custom <s-p-h-panel> */
+    position: absolute;
+  /* end <s-p-h-panel> */
+  
+}
+
+
+/* custom <splitPanel bottom> */
+
+.s-p-v-split-element {
+    float:left;
+}
+
+.s-p-h-split-element {
+
+}
+
+.s-p-v-splitter {
+    position: relative;
+    background-color: black;
+    width: 5px;
+    cursor:e-resize; 
+    float:left;
+    overflow: hidden;
+ }
+
+.s-p-h-splitter {
+    position: relative;
+    background-color: black;
+    height: 5px;
+    cursor:n-resize;
+    overflow: hidden;
+ }
+
+.s-p-h-ghost-splitter {
+    position: absolute;
+    background-color: gray;
+    overflow: hidden;
+}
+
+.s-p-v-ghost-splitter {
+    position: absolute;
+    background-color: gray;
+    overflow: hidden;
+}
+
+/* end <splitPanel bottom> */
