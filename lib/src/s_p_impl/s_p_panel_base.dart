@@ -317,7 +317,7 @@ abstract class SPPanelBase extends WebComponent {
   }
 
   void _snapGhostToMovingSplitter() {
-    _ghostSplitter.startOffset = _movingSplitter.startOffset - startTotalScroll;
+    _ghostSplitter.startOffset = _movingSplitter.startOffset - _startTotalScroll;
     _ghostSplitter.contraStartOffset = _movingSplitter.contraStartOffset - startTotalContraScroll;
     _ghostSplitter.contraLength = _movingSplitter.contraLength;
   }
@@ -364,7 +364,7 @@ abstract class SPPanelBase extends WebComponent {
   /// _firstSplitElement to _secondSplitElement or the reverse depending on
   /// direction of the move
   void _finalizeSplitterMove(MouseEvent e) {
-    var delta = _ghostSplitter.startOffset - _movingSplitter.startOffset + startTotalScroll;
+    var delta = _ghostSplitter.startOffset - _movingSplitter.startOffset + _startTotalScroll;
     if(delta == 0) 
       return;
     _firstSplitElement.length = (_firstSplitElement.length + delta).round();
@@ -372,7 +372,7 @@ abstract class SPPanelBase extends WebComponent {
   }
 
   /// As mouse moves the ghost splitter must track it during a splitter move
-  void _moveGhostSplitter(e) {
+  void _moveGhostSplitter(MouseEvent e) {
     num delta = distance(_splitterMoveStart, e.client);
     var firstLength = _firstSplitElement.length;
     var secondLength = _secondSplitElement.length;
@@ -381,8 +381,10 @@ abstract class SPPanelBase extends WebComponent {
     delta = delta<0? max(delta, minLength - firstLength) 
       : min(delta, secondLength - minLength);
 
-    _ghostSplitter.startOffset = 
-      (_movingSplitter.startOffset + delta - startTotalScroll).round();
+    int newOffset = max(0,
+        (_movingSplitter.startOffset + delta - _startTotalScroll).round());
+
+    _ghostSplitter.startOffset = newOffset;
   }
 
   /// Set up the event handlers

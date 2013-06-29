@@ -9,6 +9,7 @@ main() {
   String here = path.absolute(options.script);
   String topDir = path.dirname(path.dirname(path.dirname(here)));
   ComponentLibrary lib = componentLibrary('split_panel')
+    ..pubSpec.homepage = 'https://github.com/patefacio/split_panel'
     ..doc = '''Simple panel library supporting horizontal and vertical splitter panels'''
     ..rootPath = topDir
     ..examples = [

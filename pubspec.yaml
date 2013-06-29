@@ -1,11 +1,15 @@
 name: split_panel
 version: 0.0.1
+author: Daniel Davidson <dbdavidson@yahoo.com>
+homepage: https://github.com/patefacio/split_panel
+description: >
+  Simple panel library supporting horizontal and vertical splitter panels
 dependencies:
-  browser:
-  pathos:
-  web_ui:
-  logging:
-  logging_handlers:
+  browser:  ">=0.5.20 <0.5.21"
+  pathos:  ">=0.5.20 <0.5.21"
+  web_ui:  ">=0.4.12+3 <0.4.13"
+  logging:  ">=0.5.20 <0.5.21"
+  logging_handlers:  ">=0.5.0+3 <0.5.1"
 # custom <split_panel dependencies>
 # end <split_panel dependencies>
 
