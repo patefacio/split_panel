@@ -11,7 +11,24 @@ types of entities: *Split Elements* and *Splitters*. *Splitters* are
 placed between each *Split Element* child of the panel component. A
 small amount of configuration is possible using html attributes. The
 attributes can be used on the component instantiation as well as
-contained children. The following html attributes are supported by the
+contained children. 
+
+A simple example:
+
+    <x-s-p-v-panel data-s-p-fit-to-method='window' style="background: BurlyWood">
+      <x-s-p-h-panel data-s-p-fit-to-method='parent' style="background: BurlyWood">
+        <p>V1 Horizontal (First) Panel Nested in Vertical Panel</p>
+        <p>V1 Horizontal (Second) Panel Nested in Vertical Panel</p>
+        <p>V1 Horizontal (Third) Panel Nested in Vertical Panel</p>
+      </x-s-p-h-panel>
+      <x-s-p-h-panel data-s-p-fit-to-method='parent' style="background: BurlyWood">
+        <p>V2 Horizontal (First) Panel Nested in Vertical Panel</p>
+        <p>V2 Horizontal (Second) Panel Nested in Vertical Panel</p>
+        <p>V2 Horizontal (Third) Panel Nested in Vertical Panel</p>
+      </x-s-p-h-panel>
+    </x-s-p-v-panel>
+
+The following html attributes are supported by the
 component:
  
  * *data-s-p-fit-to-method* Specified on the panel itself. The allowed

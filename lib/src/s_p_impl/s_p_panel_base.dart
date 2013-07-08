@@ -463,18 +463,7 @@ abstract class SPPanelBase extends WebComponent {
     _setFitToMethod();
     if(!hasSPPanelAncestor())
       _rootPanel = this;
-  }
 
-  void set zIndex(int i) {
-    _panel.element.style.zIndex = "${i}";
-    _logger.info("Set ${_panel.element.id} zindex to ${i} position ${_panel.element.style.position}");
-    _splitElements.forEach((se) => se.zIndex = i);
-    _splitters.forEach((splitter) => splitter.zIndex = i+1);
-    _ghostSplitter.zIndex = i+1;
-    _sPPanelDescendents.forEach((panel) => _panel.zIndex = i+2);
-  }
-
-  void inserted() {
     style.border = "0px";
     style.margin = "0px";
     style.padding = "0px";
@@ -488,6 +477,19 @@ abstract class SPPanelBase extends WebComponent {
       _totalSplitterLength = _splitters.length * _splitters.first.length;
     }
 
+    _attachListeners();
+  }
+
+  void set zIndex(int i) {
+    _panel.element.style.zIndex = "${i}";
+    _logger.info("Set ${_panel.element.id} zindex to ${i} position ${_panel.element.style.position}");
+    _splitElements.forEach((se) => se.zIndex = i);
+    _splitters.forEach((splitter) => splitter.zIndex = i+1);
+    _ghostSplitter.zIndex = i+1;
+    _sPPanelDescendents.forEach((panel) => _panel.zIndex = i+2);
+  }
+
+  void inserted() {
     if(fullBodied) {
       document.body.style.margin = "0px";
       document.body.style.height = "100%";
@@ -505,10 +507,6 @@ abstract class SPPanelBase extends WebComponent {
 
     if(_rootPanel == this)
       zIndex = 1;
-
-    _attachListeners();
-
-    _logger.info("Inserted $this");
   }
 
   String toString() {
@@ -562,6 +560,7 @@ abstract class IElement {
   int get length;
   int get usableLength;
   set length(int);
+  int get usableContraLength;
   int get totalScroll;
   int get totalContraScroll;
   int get contraStartOffset;
